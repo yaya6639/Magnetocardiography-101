@@ -32,7 +32,7 @@ jobs:
 
       - name: Generate daily digest
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
         run: python main.py
 
       - name: Persist generated reports
@@ -46,4 +46,3 @@ jobs:
             git commit -m "chore: update daily OPM paper digest"
             git push
           fi
-

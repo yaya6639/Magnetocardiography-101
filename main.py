@@ -242,9 +242,9 @@ def generate_digests(papers: list[Paper], config: dict[str, Any], dry_run: bool)
             }
         return
 
-    api_key = os.getenv("OPENAI_API_KEY")
+    api_key = os.getenv("DEEPSEEK_API_KEY")
     if not api_key:
-        raise RuntimeError("OPENAI_API_KEY is not configured")
+        raise RuntimeError("DEEPSEEK_API_KEY is not configured")
     payload = [
         {
             "id": index,
@@ -257,20 +257,26 @@ def generate_digests(papers: list[Paper], config: dict[str, Any], dry_run: bool)
     ]
     prompt = (
         "你是OPM-MCG/MEG文献情报编辑。仅依据给出的题目和摘要，为每篇论文生成简洁中文速读。"
-        "不得补充摘要之外的事实。返回严格JSON数组，每项包含id、takeaway、methods、relevance。"
+        "不得补充摘要之外的事实。返回严格JSON对象，格式为{items:[{id,takeaway,methods,relevance}]}。"
         "takeaway不超过80字，methods不超过70字，relevance不超过60字。输入：\n"
         + json.dumps(payload, ensure_ascii=False)
     )
-    client = OpenAI(api_key=api_key)
-    response = client.responses.create(
+    client = OpenAI(api_key=api_key, base_url="https://api.deepseek.com")
+    response = client.chat.completions.create(
         model=config["project"]["model"],
-        input=prompt,
-        max_output_tokens=int(config["project"]["max_output_tokens"]),
+        messages=[
+            {"role": "system", "content": "你是严谨的OPM-MCG/MEG文献情报编辑。"},
+            {"role": "user", "content": prompt},
+        ],
+        max_tokens=int(config["project"]["max_output_tokens"]),
+        response_format={"type": "json_object"},
+        thinking={"type": "disabled"},
     )
-    raw = response.output_text.strip()
+    raw = response.choices[0].message.content.strip()
     raw = re.sub(r"^```(?:json)?\s*|\s*```$", "", raw, flags=re.IGNORECASE)
     decoded = json.loads(raw)
-    by_id = {int(item["id"]): item for item in decoded}
+    items = decoded.get("items", decoded) if isinstance(decoded, dict) else decoded
+    by_id = {int(item["id"]): item for item in items}
     for index, paper in enumerate(papers):
         item = by_id.get(index, {})
         paper.digest = {

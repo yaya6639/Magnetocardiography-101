@@ -3,7 +3,8 @@ title = "OPM Literature Intelligence"
 timezone = "Asia/Shanghai"
 max_report_papers = 7
 lookback_days = 7
-model = "gpt-4o-mini"
+provider = "deepseek"
+model = "deepseek-v4-flash"
 max_output_tokens = 4500
 
 [sources]

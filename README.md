@@ -35,5 +35,5 @@ This repository also hosts a lightweight literature-intelligence pipeline for OP
 
 - The workflow runs daily at 22:00 UTC (06:00 Beijing time) and supports manual dispatch.
 - GitHub Pages is generated from `docs/` and contains at most seven S/A-priority papers.
-- Lower-priority candidates are retained in `output/backup_papers.json` without LLM-generated briefs.
+- DeepSeek API generates briefs only for selected S/A papers; lower-priority candidates are retained in `output/backup_papers.json` without LLM-generated briefs.
 - Processed DOI or source identifiers are persisted in `output/seen_dois.json` to avoid repeated API use.
