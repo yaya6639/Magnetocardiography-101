@@ -40,6 +40,7 @@ class Paper:
     url: str
     doi: str = ""
     source_id: str = ""
+    affiliations: list[str] | None = None
     score: int = 0
     grade: str = "B"
     matched_terms: list[str] | None = None
@@ -122,6 +123,7 @@ def fetch_pubmed(config: dict[str, Any], start_date: date) -> list[Paper]:
         title = text_of(journal_article.find("ArticleTitle"))
         abstract = " ".join(text_of(x) for x in journal_article.findall("Abstract/AbstractText"))
         authors = []
+        affiliations = []
         for author in journal_article.findall("AuthorList/Author"):
             collective = text_of(author.find("CollectiveName"))
             personal = " ".join(
@@ -129,6 +131,10 @@ def fetch_pubmed(config: dict[str, Any], start_date: date) -> list[Paper]:
             )
             if collective or personal:
                 authors.append(collective or personal)
+            for affiliation in author.findall("AffiliationInfo/Affiliation"):
+                value = text_of(affiliation)
+                if value and value not in affiliations:
+                    affiliations.append(value)
         doi = ""
         for article_id in article.findall(".//ArticleId"):
             if article_id.attrib.get("IdType") == "doi":
@@ -147,6 +153,7 @@ def fetch_pubmed(config: dict[str, Any], start_date: date) -> list[Paper]:
                     url=f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/",
                     doi=doi,
                     source_id=pmid,
+                    affiliations=affiliations,
                 )
             )
     return papers
@@ -186,6 +193,7 @@ def fetch_arxiv(config: dict[str, Any], start_date: date) -> list[Paper]:
                 url=entry.link,
                 doi=doi,
                 source_id=arxiv_id,
+                affiliations=[],
             )
         )
     return papers
@@ -256,8 +264,9 @@ def generate_digests(papers: list[Paper], config: dict[str, Any], dry_run: bool)
         for index, paper in enumerate(papers)
     ]
     prompt = (
-        "你是OPM-MCG/MEG文献情报编辑。只依据题目和摘要生成极简中文速读，不得补充事实。"
-        "返回JSON对象{items:[{id,takeaway,methods,relevance}]}。每项三句，每句不超过35字。输入：\n"
+        "你是OPM-MCG/MEG文献情报编辑。只依据题目和摘要生成中文速读，不得补充事实。"
+        "返回JSON对象{items:[{id,takeaway,methods,relevance}]}。"
+        "结论150字内，方法100字内，相关性100字内。输入：\n"
         + json.dumps(payload, ensure_ascii=False)
     )
     client = OpenAI(api_key=api_key, base_url="https://api.deepseek.com")
@@ -292,6 +301,25 @@ def author_line(paper: Paper) -> str:
     return shown + (" 等" if len(paper.authors) > 5 else "")
 
 
+def affiliation_line(paper: Paper) -> str:
+    values = paper.affiliations or []
+    return "；".join(values[:3]) if values else "未提供"
+
+
+def country_line(paper: Paper) -> str:
+    text = " ".join(paper.affiliations or [])
+    countries = [
+        "China", "中国", "United States", "USA", "美国", "United Kingdom", "英国",
+        "Canada", "加拿大", "Australia", "澳大利亚", "Germany", "德国", "France", "法国",
+        "Japan", "日本", "South Korea", "韩国", "Singapore", "新加坡", "Switzerland", "瑞士",
+    ]
+    found = []
+    for country in countries:
+        if country.lower() in text.lower() and country not in found:
+            found.append(country)
+    return "、".join(found) if found else "未提供"
+
+
 def render_markdown(selected: list[Paper], backups: list[Paper], run_day: str) -> str:
     lines = [
         "# OPM 文献每日速读",
@@ -312,6 +340,10 @@ def render_markdown(selected: list[Paper], backups: list[Paper], run_day: str) -
                 f"**等级/评分：** {paper.grade} / {paper.score}　 **来源：** {paper.source}　 **日期：** {paper.published}",
                 "",
                 f"**作者：** {author_line(paper)}",
+                "",
+                f"**单位：** {affiliation_line(paper)}",
+                "",
+                f"**国家：** {country_line(paper)}",
                 "",
                 f"**一句话结论：** {digest.get('takeaway', '')}",
                 "",
@@ -337,7 +369,7 @@ def render_html(selected: list[Paper], backups: list[Paper], run_day: str) -> st
             <article class="paper grade-{paper.grade.lower()}">
               <div class="paper-head"><b>{index:02d}</b><em>{paper.grade} · {paper.score}</em></div>
               <h2><a href="{html.escape(paper.url)}">{html.escape(paper.title)}</a></h2>
-              <p class="meta">{html.escape(author_line(paper))} · {html.escape(paper.source)} · {html.escape(paper.published)}</p>
+              <p class="meta">作者：{html.escape(author_line(paper))}<br>单位：{html.escape(affiliation_line(paper))}<br>国家：{html.escape(country_line(paper))}<br>{html.escape(paper.source)} · {html.escape(paper.published)}</p>
               <p class="takeaway">{html.escape(digest.get('takeaway', ''))}</p>
               <dl><dt>方法</dt><dd>{html.escape(digest.get('methods', ''))}</dd><dt>相关性</dt><dd>{html.escape(digest.get('relevance', ''))}</dd></dl>
               <div class="tags">{tags}</div>
