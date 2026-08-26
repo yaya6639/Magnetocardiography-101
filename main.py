@@ -249,16 +249,15 @@ def generate_digests(papers: list[Paper], config: dict[str, Any], dry_run: bool)
         {
             "id": index,
             "title": paper.title,
-            "abstract": paper.abstract[:5000],
+            "abstract": paper.abstract[: int(config["project"]["abstract_max_chars"])],
             "grade": paper.grade,
             "score": paper.score,
         }
         for index, paper in enumerate(papers)
     ]
     prompt = (
-        "你是OPM-MCG/MEG文献情报编辑。仅依据给出的题目和摘要，为每篇论文生成简洁中文速读。"
-        "不得补充摘要之外的事实。返回严格JSON对象，格式为{items:[{id,takeaway,methods,relevance}]}。"
-        "takeaway不超过80字，methods不超过70字，relevance不超过60字。输入：\n"
+        "你是OPM-MCG/MEG文献情报编辑。只依据题目和摘要生成极简中文速读，不得补充事实。"
+        "返回JSON对象{items:[{id,takeaway,methods,relevance}]}。每项三句，每句不超过35字。输入：\n"
         + json.dumps(payload, ensure_ascii=False)
     )
     client = OpenAI(api_key=api_key, base_url="https://api.deepseek.com")

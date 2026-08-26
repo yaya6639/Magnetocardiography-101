@@ -5,7 +5,8 @@ max_report_papers = 7
 lookback_days = 7
 provider = "deepseek"
 model = "deepseek-v4-flash"
-max_output_tokens = 4500
+max_output_tokens = 1800
+abstract_max_chars = 1800
 
 [sources]
 pubmed = true
