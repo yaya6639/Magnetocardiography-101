@@ -278,7 +278,8 @@ def generate_digests(papers: list[Paper], config: dict[str, Any], dry_run: bool)
         ],
         max_tokens=int(config["project"]["max_output_tokens"]),
         response_format={"type": "json_object"},
-        thinking={"type": "disabled"},
+        # DeepSeek-specific fields must go through the SDK extension payload.
+        extra_body={"thinking": {"type": "disabled"}},
     )
     raw = response.choices[0].message.content.strip()
     raw = re.sub(r"^```(?:json)?\s*|\s*```$", "", raw, flags=re.IGNORECASE)
