@@ -183,6 +183,11 @@ def fetch_arxiv(config: dict[str, Any], start_date: date) -> list[Paper]:
             continue
         arxiv_id = entry.id.rsplit("/", 1)[-1]
         doi = entry.get("arxiv_doi", "")
+        arxiv_affiliations = []
+        for author in entry.get("authors", []):
+            value = author.get("arxiv_affiliation", "") if hasattr(author, "get") else ""
+            if value and value not in arxiv_affiliations:
+                arxiv_affiliations.append(value)
         papers.append(
             Paper(
                 title=" ".join(entry.title.split()),
@@ -193,7 +198,7 @@ def fetch_arxiv(config: dict[str, Any], start_date: date) -> list[Paper]:
                 url=entry.link,
                 doi=doi,
                 source_id=arxiv_id,
-                affiliations=[],
+                affiliations=arxiv_affiliations,
             )
         )
     return papers
@@ -247,6 +252,7 @@ def generate_digests(papers: list[Paper], config: dict[str, Any], dry_run: bool)
                 "takeaway": "Dry-run：已通过分级规则，未调用语言模型。",
                 "methods": "请在正式运行后查看模型生成的方法概述。",
                 "relevance": "与 OPM-MCG/MEG 文献情报主题相关。",
+                "limitations": "正式运行后补充研究局限与可借鉴点。",
             }
         return
 
@@ -265,8 +271,8 @@ def generate_digests(papers: list[Paper], config: dict[str, Any], dry_run: bool)
     ]
     prompt = (
         "你是OPM-MCG/MEG文献情报编辑。只依据题目和摘要生成中文速读，不得补充事实。"
-        "返回JSON对象{items:[{id,takeaway,methods,relevance}]}。"
-        "结论150字内，方法100字内，相关性100字内。输入：\n"
+        "返回JSON对象{items:[{id,takeaway,methods,relevance,limitations}]}。"
+        "结论180字内，方法140字内，相关性140字内，局限或可借鉴点100字内。输入：\n"
         + json.dumps(payload, ensure_ascii=False)
     )
     client = OpenAI(api_key=api_key, base_url=config["project"]["base_url"])
@@ -290,6 +296,7 @@ def generate_digests(papers: list[Paper], config: dict[str, Any], dry_run: bool)
             "takeaway": str(item.get("takeaway", "模型未返回核心结论。")),
             "methods": str(item.get("methods", "模型未返回方法概述。")),
             "relevance": str(item.get("relevance", "模型未返回相关性说明。")),
+            "limitations": str(item.get("limitations", "模型未返回局限或可借鉴点。")),
         }
 
 
@@ -350,6 +357,10 @@ def render_markdown(selected: list[Paper], backups: list[Paper], run_day: str) -
                 "",
                 f"**与你的方向的关系：** {digest.get('relevance', '')}",
                 "",
+                f"**局限/可借鉴点：** {digest.get('limitations', '')}",
+                "",
+                f"**摘要摘录：** {paper.abstract[:700]}{'……' if len(paper.abstract) > 700 else ''}",
+                "",
                 f"**命中词：** {', '.join(paper.matched_terms or []) or '无'}",
                 "",
             ]
@@ -370,7 +381,7 @@ def render_html(selected: list[Paper], backups: list[Paper], run_day: str) -> st
               <h2><a href="{html.escape(paper.url)}">{html.escape(paper.title)}</a></h2>
               <p class="meta">作者：{html.escape(author_line(paper))}<br>单位：{html.escape(affiliation_line(paper))}<br>国家：{html.escape(country_line(paper))}<br>{html.escape(paper.source)} · {html.escape(paper.published)}</p>
               <p class="takeaway">{html.escape(digest.get('takeaway', ''))}</p>
-              <dl><dt>方法</dt><dd>{html.escape(digest.get('methods', ''))}</dd><dt>相关性</dt><dd>{html.escape(digest.get('relevance', ''))}</dd></dl>
+              <dl><dt>方法</dt><dd>{html.escape(digest.get('methods', ''))}</dd><dt>相关性</dt><dd>{html.escape(digest.get('relevance', ''))}</dd><dt>局限/启示</dt><dd>{html.escape(digest.get('limitations', ''))}</dd><dt>摘要摘录</dt><dd>{html.escape(paper.abstract[:700])}{'……' if len(paper.abstract) > 700 else ''}</dd></dl>
               <div class="tags">{tags}</div>
             </article>"""
         )
