@@ -28,3 +28,12 @@ My mission is to bridge clinical cardiology needs with advanced sensing and comp
 *   Email: [yaya_6639@163.com]
 
 *Feel free to ⭐ this repository to stay updated. Suggestions, discussions, and collaborations are warmly welcome!*
+
+## OPM Daily Paper Digest
+
+This repository also hosts a lightweight literature-intelligence pipeline for OPM-MCG/MEG, magnetocardiography, magnetoencephalography, spin magnetometers, artifact removal, brain networks, multimodal fusion, and clinical translation.
+
+- The workflow runs daily at 22:00 UTC (06:00 Beijing time) and supports manual dispatch.
+- GitHub Pages is generated from `docs/` and contains at most seven S/A-priority papers.
+- Lower-priority candidates are retained in `output/backup_papers.json` without LLM-generated briefs.
+- Processed DOI or source identifiers are persisted in `output/seen_dois.json` to avoid repeated API use.

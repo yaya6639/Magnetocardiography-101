@@ -1,0 +1,82 @@
+[project]
+title = "OPM Literature Intelligence"
+timezone = "Asia/Shanghai"
+max_report_papers = 7
+lookback_days = 7
+model = "gpt-4o-mini"
+max_output_tokens = 4500
+
+[sources]
+pubmed = true
+arxiv = true
+pubmed_retmax = 80
+arxiv_max_results = 50
+
+[search]
+pubmed_query = '''
+(
+  "optically pumped magnetometer"[Title/Abstract] OR
+  "optically pumped magnetometry"[Title/Abstract] OR
+  OPM-MEG[Title/Abstract] OR OPM-MCG[Title/Abstract] OR
+  magnetocardiography[Title/Abstract] OR magnetoencephalography[Title/Abstract] OR
+  "spin-exchange relaxation-free"[Title/Abstract] OR
+  "atomic magnetometer"[Title/Abstract] OR
+  "quantum magnetometer"[Title/Abstract] OR
+  "NV center"[Title/Abstract]
+)
+'''
+arxiv_query = '''
+all:"optically pumped magnetometer" OR all:"OPM-MEG" OR all:"OPM-MCG" OR
+all:magnetocardiography OR all:magnetoencephalography OR
+all:"atomic magnetometer" OR all:"quantum magnetometer" OR all:"NV center"
+'''
+
+[scoring]
+s_threshold = 7
+a_threshold = 5
+s_anchor_terms = [
+  "optically pumped magnetometer",
+  "optically pumped magnetometry",
+  "opm-meg",
+  "opm-mcg",
+  "wearable meg",
+  "on-scalp meg",
+]
+
+[scoring.s_terms]
+"optically pumped magnetometer" = 5
+"optically pumped magnetometry" = 5
+"opm-meg" = 5
+"opm-mcg" = 5
+"wearable meg" = 4
+"on-scalp meg" = 4
+"sensor array" = 3
+"sensor calibration" = 3
+"field nulling" = 3
+"magnetic shielding" = 2
+"artifact rejection" = 3
+"artifact removal" = 3
+"motion artifact" = 3
+"human study" = 3
+"healthy volunteers" = 3
+"patients" = 3
+"clinical" = 2
+"magnetocardiography" = 3
+"magnetoencephalography" = 2
+
+[scoring.a_terms]
+"squid" = 3
+"brain network" = 3
+"functional connectivity" = 3
+"multimodal" = 3
+"sensor fusion" = 3
+"nv center" = 3
+"nitrogen-vacancy" = 3
+"quantum sensing" = 3
+"quantum sensor" = 3
+"atomic magnetometer" = 3
+"spin magnetometer" = 3
+"medical device" = 2
+"clinical validation" = 2
+"artificial intelligence" = 1
+"machine learning" = 1
