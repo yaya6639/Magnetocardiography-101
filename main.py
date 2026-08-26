@@ -250,9 +250,9 @@ def generate_digests(papers: list[Paper], config: dict[str, Any], dry_run: bool)
             }
         return
 
-    api_key = os.getenv("DEEPSEEK_API_KEY")
+    api_key = os.getenv("OPENCODE_ZEN_API_KEY")
     if not api_key:
-        raise RuntimeError("DEEPSEEK_API_KEY is not configured")
+        raise RuntimeError("OPENCODE_ZEN_API_KEY is not configured")
     payload = [
         {
             "id": index,
@@ -269,7 +269,7 @@ def generate_digests(papers: list[Paper], config: dict[str, Any], dry_run: bool)
         "结论150字内，方法100字内，相关性100字内。输入：\n"
         + json.dumps(payload, ensure_ascii=False)
     )
-    client = OpenAI(api_key=api_key, base_url="https://api.deepseek.com")
+    client = OpenAI(api_key=api_key, base_url=config["project"]["base_url"])
     response = client.chat.completions.create(
         model=config["project"]["model"],
         messages=[
@@ -278,8 +278,6 @@ def generate_digests(papers: list[Paper], config: dict[str, Any], dry_run: bool)
         ],
         max_tokens=int(config["project"]["max_output_tokens"]),
         response_format={"type": "json_object"},
-        # DeepSeek-specific fields must go through the SDK extension payload.
-        extra_body={"thinking": {"type": "disabled"}},
     )
     raw = response.choices[0].message.content.strip()
     raw = re.sub(r"^```(?:json)?\s*|\s*```$", "", raw, flags=re.IGNORECASE)
