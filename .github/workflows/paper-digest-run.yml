@@ -2,6 +2,7 @@ name: OPM paper digest
 
 on:
   schedule:
+    - cron: "55 21 * * *" # UTC 21:55 = Beijing 05:55
     - cron: "0 22 * * *" # UTC 22:00 = Beijing 06:00
   workflow_dispatch:
 
