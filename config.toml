@@ -2,7 +2,7 @@
 title = "OPM Literature Intelligence"
 timezone = "Asia/Shanghai"
 max_report_papers = 7
-lookback_days = 7
+lookback_days = 30
 provider = "opencode-zen"
 base_url = "https://opencode.ai/zen/go/v1"
 model = "deepseek-v4-flash"
@@ -25,13 +25,20 @@ pubmed_query = '''
   "spin-exchange relaxation-free"[Title/Abstract] OR
   "atomic magnetometer"[Title/Abstract] OR
   "quantum magnetometer"[Title/Abstract] OR
-  "NV center"[Title/Abstract]
+  "NV center"[Title/Abstract] OR
+  OPM[Title/Abstract] OR
+  biomagnetic[Title/Abstract] OR
+  "wearable magnetometer"[Title/Abstract] OR
+  "brain-heart axis"[Title/Abstract] OR
+  "artifact correction"[Title/Abstract]
 )
 '''
 arxiv_query = '''
 all:"optically pumped magnetometer" OR all:"OPM-MEG" OR all:"OPM-MCG" OR
 all:magnetocardiography OR all:magnetoencephalography OR
-all:"atomic magnetometer" OR all:"quantum magnetometer" OR all:"NV center"
+all:"atomic magnetometer" OR all:"quantum magnetometer" OR all:"NV center" OR
+all:OPM OR all:biomagnetic OR all:"wearable magnetometer" OR
+all:"brain-heart axis" OR all:"artifact correction"
 '''
 
 [scoring]
@@ -68,6 +75,11 @@ s_anchor_terms = [
 "magnetoencephalography" = 2
 
 [scoring.a_terms]
+"opm" = 2
+"biomagnetic" = 3
+"wearable magnetometer" = 3
+"brain-heart axis" = 3
+"artifact correction" = 3
 "squid" = 3
 "brain network" = 3
 "functional connectivity" = 3
