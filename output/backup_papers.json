@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "title": "Atypical neural activation and age-related patterns in dyslexia.",
+    "abstract": "This magnetoencephalography study investigated the spatiotemporal neural responses during single-word reading. We used a silent reading task with linguistic stimuli varying in lexicality and frequency (high- and low-frequency words, and pseudowords), and tested typically developing (TD) and dyslexic developing (DD) children (aged 7 to 12). We observed no significant sensitivity to word frequency or lexicality either within or between the groups, likely reflecting the constraints of the silent reading paradigm. Direct comparisons between the groups revealed significant amplitude reductions in the DD group across the bilateral occipito-temporal and left superior temporal cortices. Despite these reduced signal amplitudes, the inter-hemispheric relationship of peak latencies (PLs) in the DD group remained consistent with the TD pattern. Furthermore, within the TD group, we identified a clear relationship between age and PL: older typical readers exhibited decreased latencies in the left hemisphere, pointing to the age-related automatization of the reading network. In contrast, we did not observe this age-related pattern in the DD group, which highlights a functional atypicality that remains evident across the investigated age range. Overall, these findings indicate that the core neural atypicality in dyslexia involves reduced activation strength and an absence of typical age-related PL decreases, rather than a fundamental overall shift in PL.",
+    "authors": [
+      "Ilya Samoylov",
+      "Tatyana Bolgina",
+      "Georgii Lonshakov",
+      "Ekaterina Shcheglova",
+      "Militina Gomozova",
+      "Tatyana Yashina",
+      "Vardan Arutiunian",
+      "Olga Dragoy"
+    ],
+    "published": "2026Aug18",
+    "source": "PubMed",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42667250/",
+    "doi": "10.1093/cercor/bhag122",
+    "source_id": "42667250",
+    "affiliations": [
+      "Center for Language and Brain, HSE University, 3 Krivokolenny pereulok, Moscow 101000, Russia.",
+      "Center for Speech Pathology and Neurorehabilitation, Nikoloyamskaya Street, 20, Building 1, Moscow 109240, Russia.",
+      "Azrieli Research Center of CHU Sainte-Justine, 3175 Chem. de la Côte-Sainte-Catherine, Montreal, Quebec H3T 1C5, Canada."
+    ],
+    "score": 2,
+    "grade": "B",
+    "matched_terms": [
+      "magnetoencephalography"
+    ],
+    "digest": null
+  }
+]
