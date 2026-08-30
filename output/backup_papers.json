@@ -1,1 +1,41 @@
-[]
+[
+  {
+    "title": "Characteristics of interictal MEG spike dipoles in temporal lobe epilepsy with unilateral amygdala enlargement.",
+    "abstract": "To clarify the characteristics of MEG findings in patients with temporal lobe epilepsy with amygdala enlargement (TLE-AE). We retrospectively identified patients who showed unilateral amygdala enlargement (AE) on MRI and ≥ 5 interictal spikes localized to the ipsilateral temporal region on MEG. Patients were classified into an AE-only group with isolated AE and an AE-plus group with AE plus additional abnormalities. The equivalent current dipole (ECD) model was used to estimate the cortical sources of MEG interictal spikes. The mean pairwise angle (MPA) of the ECD orientations was calculated while the ECD locations were examined. To stabilize the estimates, K-sampling with 1,000 iterations was performed. Group differences were assessed using the Mann-Whitney U test. Seventeen patients (nine males, aged 18-67 years) met the criteria. The AE-only group (n = 9) showed a significantly higher MPA than the AE-plus group (n = 8, p = 0.046), indicating greater orientation dispersion in the AE-only group. In both groups, the estimated ECDs were located in the anterior and mesial temporal lobes. Patients with Isolated TLE-AE exhibited more dispersed orientations of MEG interictal spike dipoles than those with concomitant lesions, whereas the dipole locations consistently involved the anterior and mesial temporal lobes. Orientation dispersion of the MEG interictal spike dipoles may reflect differences in the epileptogenic networks of patients with TLE-AE.",
+    "authors": [
+      "Kazutoshi Konomatsu",
+      "Makoto Ishida",
+      "Shiho Sato",
+      "Takafumi Kubota",
+      "Kazushi Ukishiro",
+      "Shin-Ichiro Osawa",
+      "Yosuke Kakisaka",
+      "Shunji Mugikura",
+      "Masashi Aoki",
+      "Nobukazu Nakasato",
+      "Kazutaka Jin"
+    ],
+    "published": "2026Aug19",
+    "source": "PubMed",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42667844/",
+    "doi": "10.1016/j.clinph.2026.2112377",
+    "source_id": "42667844",
+    "affiliations": [
+      "Department of Epileptology, Tohoku University Graduate School of Medicine, Sendai, Miyagi, Japan.",
+      "Department of Epileptology, Tohoku University Graduate School of Medicine, Sendai, Miyagi, Japan. Electronic address: makoto.ishida.c3@tohoku.ac.jp.",
+      "Department of Radiology, Tohoku University Graduate School of Medicine, Sendai, Miyagi, Japan.",
+      "Department of Epileptology, Tohoku University Graduate School of Medicine, Sendai, Miyagi, Japan; Department of Neurology, Tohoku University Graduate School of Medicine, Sendai, Miyagi, Japan.",
+      "Department of Neurosurgery, Tohoku University Graduate School of Medicine, Sendai, Miyagi, Japan.",
+      "Department of Epileptology, Tohoku University Graduate School of Medicine, Sendai, Miyagi, Japan; Office of Medical Education, Tohoku University Graduate School of Medicine, Sendai, Miyagi, Japan.",
+      "Department of Diagnostic Radiology, Tohoku University Graduate School of Medicine, Sendai, Miyagi, Japan.",
+      "Department of Neurology, Tohoku University Graduate School of Medicine, Sendai, Miyagi, Japan.",
+      "Kohnan Hospital, Sendai, Miyagi, Japan."
+    ],
+    "score": 3,
+    "grade": "B",
+    "matched_terms": [
+      "patients"
+    ],
+    "digest": null
+  }
+]
