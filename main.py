@@ -422,20 +422,32 @@ def main() -> int:
     else:
         papers = []
         errors = []
+        source_counts: dict[str, int] = {}
         if config["sources"].get("pubmed"):
             try:
-                papers.extend(fetch_pubmed(config, start_date))
+                fetched = fetch_pubmed(config, start_date)
+                source_counts["PubMed"] = len(fetched)
+                papers.extend(fetched)
             except Exception as exc:
                 errors.append(f"PubMed: {exc}")
         if config["sources"].get("arxiv"):
             try:
-                papers.extend(fetch_arxiv(config, start_date))
+                fetched = fetch_arxiv(config, start_date)
+                source_counts["arXiv"] = len(fetched)
+                papers.extend(fetched)
             except Exception as exc:
                 errors.append(f"arXiv: {exc}")
         if errors and not papers:
             raise RuntimeError("All literature sources failed: " + " | ".join(errors))
         for error in errors:
             print(f"WARNING {error}", file=sys.stderr)
+        print(f"LITERATURE_SOURCES={json.dumps(source_counts, ensure_ascii=False)}")
+        if not papers:
+            print(
+                "WARNING No papers returned after source/date filtering; "
+                "check source counts, query syntax, and lookback window.",
+                file=sys.stderr,
+            )
 
     papers = deduplicate(papers)
     seen_data = read_json(SEEN_PATH, {"updated_at": "", "items": []})
@@ -443,6 +455,9 @@ def main() -> int:
     unseen = [paper for paper in papers if paper.stable_key not in seen_items]
     for paper in unseen:
         score_paper(paper, config)
+
+    grade_counts = {grade: sum(paper.grade == grade for paper in unseen) for grade in ("S", "A", "B")}
+    print(f"LITERATURE_COUNTS fetched={len(papers)} unseen={len(unseen)} grades={json.dumps(grade_counts)}")
 
     ranked = sorted(unseen, key=lambda item: (item.grade != "S", -item.score, item.title.lower()))
     eligible = [paper for paper in ranked if paper.grade in {"S", "A"}]

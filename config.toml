@@ -34,11 +34,11 @@ pubmed_query = '''
 )
 '''
 arxiv_query = '''
-all:"optically pumped magnetometer" OR all:"OPM-MEG" OR all:"OPM-MCG" OR
+(all:"optically pumped magnetometer" OR all:"OPM-MEG" OR all:"OPM-MCG" OR
 all:magnetocardiography OR all:magnetoencephalography OR
 all:"atomic magnetometer" OR all:"quantum magnetometer" OR all:"NV center" OR
 all:OPM OR all:biomagnetic OR all:"wearable magnetometer" OR
-all:"brain-heart axis" OR all:"artifact correction"
+all:"brain-heart axis" OR all:"artifact correction")
 '''
 
 [scoring]
