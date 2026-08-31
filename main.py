@@ -470,8 +470,17 @@ def main() -> int:
 
     REPORT_PATH.write_text(render_markdown(selected, backups, run_day), encoding="utf-8")
     HTML_PATH.write_text(render_html(selected, backups, run_day), encoding="utf-8")
+    # Keep a rolling archive so a quiet day does not erase useful candidates.
+    historical_backups = read_json(BACKUP_PATH, [])
+    backup_records = {paper.stable_key: asdict(paper) for paper in backups}
+    for record in historical_backups if isinstance(historical_backups, list) else []:
+        try:
+            key = Paper(**record).stable_key
+        except (TypeError, ValueError):
+            continue
+        backup_records.setdefault(key, record)
     BACKUP_PATH.write_text(
-        json.dumps([asdict(paper) for paper in backups], ensure_ascii=False, indent=2),
+        json.dumps(list(backup_records.values())[:300], ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
     seen_items.update(paper.stable_key for paper in unseen)
