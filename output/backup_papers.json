@@ -1,1 +1,421 @@
-[]
+[
+  {
+    "title": "Comparing aperiodic brain activity between eyes open rest and dynamic visual input using magnetoencephalography.",
+    "abstract": "Inscapes is a low demand abstract animation used as an alternative to eyes open rest in neuroimaging studies, particularly with paediatric and clinical populations prone to head motion. Although prior work has established that functional connectivity patterns during Inscapes closely resemble those during rest, no study has examined whether the two conditions differ in aperiodic neural activity, a broadband feature of the power spectrum linked to excitation/inhibition balance. Here we used magnetoencephalography (MEG) in 54 healthy adults to compare spectrally parameterised aperiodic and periodic measures between eyes open rest and Inscapes viewing (visual component only, without audio). At the sensor level, both the aperiodic exponent and offset were higher during rest than during Inscapes across widespread frontoparietal and occipital distributions in both magnetometers and gradiometers. Source level analyses at both the parcellation and vertex levels largely supported these patterns. These results show that Inscapes and eyes open rest produce distinct aperiodic spectral profiles, indicating that the two conditions are not interchangeable for analyses involving broadband spectral dynamics or excitation/inhibition balance estimation. They also demonstrate that a shift in aperiodic activity occurs in multiple brain regions when dynamic rather than static visual stimuli are viewed.",
+    "authors": [
+      "Tzu-Yu Hsu",
+      "Ko-Ping Chou",
+      "Yi-Ju Liu",
+      "Niall W Duncan"
+    ],
+    "published": "2026Sep",
+    "source": "PubMed",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42379400/",
+    "doi": "10.1016/j.neuroimage.2026.122093",
+    "source_id": "42379400",
+    "affiliations": [
+      "Institute of Cognitive Neuroscience, National Central University, Taoyuan, Taiwan.",
+      "Laureate Institute for Brain Research, Tulsa, OK, United States; School of Cyber Studies, University of Tulsa, Tulsa, OK, United States; Graduate Institute of Mind, Brain and Consciousness, Taipei Medical University, Taipei, Taiwan.",
+      "Graduate Institute of Mind, Brain and Consciousness, Taipei Medical University, Taipei, Taiwan. Electronic address: niall.w.duncan@gmail.com."
+    ],
+    "score": 7,
+    "grade": "A",
+    "matched_terms": [
+      "clinical",
+      "magnetoencephalography",
+      "functional connectivity"
+    ],
+    "digest": null
+  },
+  {
+    "title": "DeepEpiX: A software for visualization, annotation and automatic epileptical spike detection in MEG recordings.",
+    "abstract": "Magnetoencephalography (MEG) non-invasively records brain activity. It is widely used in presurgical evaluation of drug-resistant epilepsy, where it contributes to localizing the epileptogenic zone. Manual analysis of MEG is time-consuming and subject to inter-rater variability. Yet, there is a lack of adapted software facilitating its analysis. We present DeepEpiX, a MEG data analysis software within a user-friendly graphical interface developed to assist clinicians in detecting pathological events, known as Interictal Epileptogenic Discharges (IEDs). The software allows applying basic preprocessing steps, while its main feature is the integration of pre-trained deep learning models for automatic IED detection. Its modular architecture supports the integration of novel models. IED detection performances are reported on a use-case including 29 test patients with epilepsy. Model performance reaches a F1-score of 47% on test data, coming from the same acquisition system as the model training data, while the model is still capable of detecting IEDs on test data from a different acquisition system (F1-score: 23%). Furthermore, ensemble models improved F1-scores by more than 5% across both test sets, showing that different models capture complementary information about IEDs. DeepEpiX is the only open source software integrating state-of-the-art deep learning methods with an intuitive graphical interface for automated MEG data analysis. DeepEpiX answers clinical needs, while allowing the integration and test of novel deep learning models through the software. Although currently focused on MEG, its modular design could be extended to other modalities, such as EEG, and other applications.",
+    "authors": [
+      "Agnès Guinard",
+      "Julien Jung",
+      "Romain Bouet",
+      "Elias Boulanger",
+      "Julien Coudray",
+      "Denis Schwartz",
+      "Sébastien Daligault",
+      "Aurore Semeux-Bernier",
+      "Christian-George Bénar",
+      "Francesca Bonini",
+      "Romain Quentin",
+      "Pauline Mouches"
+    ],
+    "published": "2026Sep",
+    "source": "PubMed",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42119822/",
+    "doi": "10.1016/j.jneumeth.2026.110805",
+    "source_id": "42119822",
+    "affiliations": [
+      "Lyon Neuroscience Research Center, INSERM U1028/CNRS UMR 5292, Claude Bernard Lyon 1 University, Lyon, France.",
+      "Lyon Neuroscience Research Center, INSERM U1028/CNRS UMR 5292, Claude Bernard Lyon 1 University, Lyon, France; Functional Neurology and Epileptology Department, Lyon Civil Hospitals, Lyon, France.",
+      "Lyon Neuroscience Research Center, INSERM U1028/CNRS UMR 5292, Claude Bernard Lyon 1 University, Lyon, France; MEG Department, CERMEP, Imagerie du Vivant, Lyon, France.",
+      "MEG Department, CERMEP, Imagerie du Vivant, Lyon, France.",
+      "Aix Marseille Univ, INSERM, INS, Inst Neurosci Syst, Marseille, France.",
+      "Aix Marseille Univ, INSERM, INS, Inst Neurosci Syst, Marseille, France; APHM, Timone Hospital, Epileptology and Cerebral Rythmology, Marseille, France.",
+      "Lyon Neuroscience Research Center, INSERM U1028/CNRS UMR 5292, Claude Bernard Lyon 1 University, Lyon, France. Electronic address: pauline.mouches@inserm.fr."
+    ],
+    "score": 7,
+    "grade": "A",
+    "matched_terms": [
+      "patients",
+      "clinical",
+      "magnetoencephalography"
+    ],
+    "digest": null
+  },
+  {
+    "title": "Determining hemispheric language dominance from MEG beta-power modulations: Concordance with fMRI.",
+    "abstract": "Accurate identification of the language-dominant hemisphere is essential for surgical planning in drug-resistant focal epilepsy. Functional MRI is widely used as a noninvasive alternative to the Wada test but may be contraindicated or unreliable in some patients, motivating complementary approaches such as magnetoencephalography (MEG). We tested whether beta-band MEG power suppression can provide reliable language lateralization when combined with a task-matched nonlinguistic control, participant/ROI-specific timing, and a multi-threshold weighted-bootstrap laterality index (LI). Seventy-four adults with temporal lobe epilepsy completed visual semantic-decision and false-font control tasks during MEG. Beta-band (17-25 Hz) source power was estimated with DICS beamforming, and LIs were computed in frontal, temporal, angular, and composite lateral ROIs using 300-ms sliding windows. For comparison, participants also completed an auditory semantic-decision versus tone-decision fMRI protocol, with fMRI LIs derived from matched ROIs. MEG showed a left-lateralized spatiotemporal sequence in which frontal LI emerged earlier than temporal-parietal LI, following early bilateral temporo-parieto-occipital engagement. Compared with a prestimulus baseline, the false-font control contrast increased LI magnitude and improved MEG-fMRI correspondence, with a peak MEG-fMRI correlation of r = 0.65. Participant/ROI-specific timing produced only small and mixed changes in concordance. Using the optimized MEG pipeline, MEG and fMRI agreed in 67/74 patients (90.5%; 95% CI: 83-96%; κ = 0.81). Bootstrap LIs performed similarly to magnitude- and vertex-count-based variants while providing confidence intervals. These findings suggest that beta-band MEG suppression during semantic decision, especially when contrasted with a nonlinguistic control task, provides a temporally resolved and clinically feasible marker of hemispheric language dominance that is highly concordant with fMRI.",
+    "authors": [
+      "Vahab Youssofzadeh",
+      "Jeffrey R Binder",
+      "Joseph Heffernan",
+      "Elizabeth Bock",
+      "Amit Jaiswal",
+      "Jeffrey Stout",
+      "Candida Ustine",
+      "Rupesh Kumar Chikara",
+      "Priyanka Shah-Basak",
+      "Colin Humphries",
+      "Jed Mathis",
+      "Lisa L Conant",
+      "William L Gross",
+      "Chad Carlson",
+      "Christopher T Anderson",
+      "Bruce Hermann",
+      "Beth Meyerand",
+      "Manoj Raghavan"
+    ],
+    "published": "2026Sep",
+    "source": "PubMed",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42276436/",
+    "doi": "10.1016/j.neuroimage.2026.122051",
+    "source_id": "42276436",
+    "affiliations": [
+      "Neurology, Medical College of Wisconsin, Milwaukee, WI, USA. Electronic address: vyoussofzadeh@mcw.edu.",
+      "Neurology, Medical College of Wisconsin, Milwaukee, WI, USA; Biophysics, Medical College of Wisconsin, Milwaukee, WI, USA.",
+      "Neurology, Medical College of Wisconsin, Milwaukee, WI, USA.",
+      "MEGIN Oy, Espoo, Finland.",
+      "MEGIN Oy, Espoo, Finland; Department of Neuroscience and Biomedical Engineering, Aalto University School of Science, Espoo, Finland.",
+      "Anesthesiology, Medical College of Wisconsin, Milwaukee, WI, USA.",
+      "Neurology, University of Wisconsin-Madison, Madison, WI, USA.",
+      "Radiology, University of Wisconsin-Madison, Madison, WI, USA; Medical Physics, University of Wisconsin-Madison, Madison, WI, USA; Biomedical Engineering, University of Wisconsin-Madison, Madison, WI, USA."
+    ],
+    "score": 7,
+    "grade": "A",
+    "matched_terms": [
+      "patients",
+      "clinical",
+      "magnetoencephalography"
+    ],
+    "digest": null
+  },
+  {
+    "title": "Patient-Centric First-in-Human Dose Selection: An Ex Vivo Minimal Anticipated Biological Effect Level Approach for T-Cell Engagers in Multiple Myeloma.",
+    "abstract": "The minimal anticipated biological effect level (MABEL) approach to first-in-human (FIH) dose calculation can lead to long dose-escalation periods before observing clinical activity. We used a novel ex vivo MABEL approach to calculate the FIH starting dose for forimtamig, a T-cell bispecific antibody under investigation for the treatment of relapsed/refractory multiple myeloma (RRMM). We used in vitro and ex vivo MABEL approaches to calculate the FIH dose for a Phase 1 trial (NCT04557150) in patients with RRMM. In vitro assays used the OPM-2 MM cell line and peripheral blood mononucleocytes from healthy donors and patients with MM. Ex vivo assays used fresh bone marrow aspirates from MM patient donors. Forimtamig increased tumor cell lysis, cytokine release, and T-cell activation in vitro and ex vivo. Tumor cell lysis was considered the most relevant assay for dose calculation. EC50 for LDH release (in vitro: mean 0.6 pM; ex vivo: 9 pM for the most sensitive patient) led to calculated FIH starting doses of 0.4 and 6 μg, respectively. FIH starting dose was 6 μg. Clinical activity was observed in the second dosing cohort (18 and 54 μg). The third dosing cohort (54 and 162 μg) showed durable objective responses. Cytokine release syndrome was Grade 1 at the starting dose and absent in the second dosing cohort. Our ex vivo MABEL approach was accepted by regulatory authorities and yielded a tolerated forimtamig FIH starting dose which demonstrated clinical activity in the second dosing cohort. We encourage similar innovative patient-centric approaches to FIH dose calculation.",
+    "authors": [
+      "Thomas E Kraft",
+      "Estelle Marrer-Berger",
+      "Sara Belli",
+      "Helene Haegel",
+      "Anneliese Schneider",
+      "Anna Maria Giusti",
+      "Michael Bscheider",
+      "Wolfgang Jacob",
+      "Martin Weisser",
+      "Laura Blanco",
+      "Nicolas Frances",
+      "Eva Rossmann",
+      "Guido Steiner",
+      "Aintzane Zabaleta Azpiroz",
+      "Bruno Paiva",
+      "Ludovic Martinet",
+      "Tanja Fauti"
+    ],
+    "published": "2026Sep",
+    "source": "PubMed",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42310437/",
+    "doi": "10.1002/cpt.70366",
+    "source_id": "42310437",
+    "affiliations": [
+      "Roche Pharma Research & Early Development, Roche Innovation Center Munich, Penzberg, Germany.",
+      "Roche Pharma Research & Early Development, Roche Innovation Center Basel, Basel, Switzerland.",
+      "Roche Pharma Research & Early Development, Roche Innovation Center Zurich, Zurich, Switzerland.",
+      "Cancer Center Clínica Universidad de Navarra, Centro de Investigación Médica Aplicada, University of Navarra, IDISNA, CIBERONC, Pamplona, Spain.",
+      "Cancer Research Center of Toulouse (CRCT), Institut National de la Santé et de la Recherche Médicale (INSERM), Centre National de la Recherche Scientifique (CNRS), Université Toulouse III-Paul Sabatier (UPS), Toulouse, France."
+    ],
+    "score": 7,
+    "grade": "A",
+    "matched_terms": [
+      "patients",
+      "clinical",
+      "opm"
+    ],
+    "digest": null
+  },
+  {
+    "title": "The Clinical Value of Laparoscopic Exploration in Diagnosing and Dynamically Assessing Occult Peritoneal Metastasis in Gastric Cancer.",
+    "abstract": "Imaging-invisible occult peritoneal metastasis (OPM) is not uncommon in patients with gastric or gastroesophageal junction adenocarcinoma (G/GEJC). This study aimed to identify the risk factors for OPM detected by laparoscopic exploration, characterize the dynamic changes in OPM on laparoscopic re-exploration after treatment, and evaluate their prognostic significance. The study included 653 patients with newly diagnosed cT1-2N+/T3-4bNx, cM0 G/GEJC who underwent laparoscopic exploration and peritoneal lavage fluid cytology between July 2018 and June 2025. Of these 653 patients, 140 underwent repeat laparoscopy (the laparoscopic re-exploration cohort) with cytology after systemic therapy. Risk factors for OPM were identified by logistic regression and survival by Kaplan-Meier analysis. On initial laparoscopy, 22.2% (145/653) of the patients received a diagnosis of OPM+, whereas 77.8% (508/653) received a diagnosis of OPM-. Younger patients (age < 35 years), better Eastern Cooperative Oncology Group (ECOG) status (0 score), primary gastric cancers, CA72-4 (≥ 6.9 U/mL), sT4a/b stage, and minimal ascites (vs no ascites) were associated with OPM+. Patients with OPM+ initially had significantly worse median overall survival than OPM- patients (15.9 months vs not reached; P < 0.001). In the laparoscopic re-exploration cohort, 26.4% (37/140) showed changes in OPM status. Specifically, among the initial OPM+ patients, 57.1% (16/28) were converted to OPM-, whereas 18.8% (21/112) of the initial OPM- patients were converted to OPM+. Persistent OPM- and conversion to OPM- were associated with better survival than persistent OPM+ and conversion to OPM+. In locally advanced G/GEJC, OPM is common. Laparoscopic exploration is essential for detecting OPM, and dynamic laparoscopic evaluation of peritoneal metastasis status holds significant prognostic value.",
+    "authors": [
+      "Xiao Yan",
+      "Qing Xie",
+      "Fengping Li",
+      "Huayuan Liang",
+      "Zhiwei Li",
+      "Kaihua Huang",
+      "Huimin Zhang",
+      "Rou Zhong",
+      "Min Lai",
+      "Xinru Liu",
+      "Jiang Yu",
+      "Liying Zhao"
+    ],
+    "published": "2026Sep",
+    "source": "PubMed",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42228258/",
+    "doi": "10.1245/s10434-026-19884-8",
+    "source_id": "42228258",
+    "affiliations": [
+      "Department of General Surgery and Guangdong Provincial Key Laboratory of Precision Medicine for Gastrointestinal Tumor, Nanfang Hospital, Southern Medical University, Guangzhou, China.",
+      "Department of Gastrointestinal Surgery, Beijing Tsinghua Changgung Hospital, School of Clinical Medicine, Tsinghua University, Beijing, China.",
+      "Department of General Surgery and Guangdong Provincial Key Laboratory of Precision Medicine for Gastrointestinal Tumor, Nanfang Hospital, Southern Medical University, Guangzhou, China. balbc@163.com.",
+      "Department of General Surgery and Guangdong Provincial Key Laboratory of Precision Medicine for Gastrointestinal Tumor, Nanfang Hospital, Southern Medical University, Guangzhou, China. zlyblue11@163.com."
+    ],
+    "score": 7,
+    "grade": "A",
+    "matched_terms": [
+      "patients",
+      "clinical",
+      "opm"
+    ],
+    "digest": null
+  },
+  {
+    "title": "Dissociation Between Neural Functional Connectivity and Brain Volume Loss with Age: Insights from Resting-State Magnetoencephalography.",
+    "abstract": "To investigate the relationship between age-related brain volume loss and neural functional connectivity (FC), whole brain volume and mean FC were calculated in 75 healthy participants aged 20 to 86 years (39 women, 36 men; mean age: 59.31 years). Resting-state MEG with eyes closed and MRI were conducted. Correlations between age and whole brain volume, mean neural connectivity expressed as amplitude envelope correlation (AEC) in the alpha frequency band across 66 functional parcellations, and the standard deviation (SD) of AEC were analyzed. In seven brain regions showing significant age-related volume loss, mean AEC and SD of AEC with other regions were assessed. Whole brain volume decreased with age (r = -0.322, p = .00480), particularly in participants older than 75 years (p < .05, ANOVA). AEC values also declined with age (r = -0.359, p = .00153), with significant differences observed between generational subgroups under 45 and over 75 years (p < .05). The SD of AEC decreased across the brain with age (r = -0.326, p = .0043). However, seven brain regions with significant age-related volume loss did not consistently show significant differences in AEC or its SD between generational subgroups, in contrast to consistent volume differences observed. Overall, brain volume and neural FC declined with age, accompanied by reduced variability in FC across the brain. Nevertheless, regions exhibiting significant volume loss were not always associated with functional decline in FC or its variability, suggesting the brain may compensate for global decline through localized functional adaptations.",
+    "authors": [
+      "Yuga Takeda",
+      "Jun-Ichi Uemura",
+      "Satsuki Yamauchi",
+      "Katsuyuki Iwatsuki",
+      "Sota Saeki",
+      "Shotaro Okajima",
+      "Tomokazu Abe",
+      "Shingo Shimoda",
+      "Hitoshi Hirata",
+      "Minoru Hoshiyama"
+    ],
+    "published": "2026Sep",
+    "source": "PubMed",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41564272/",
+    "doi": "10.1177/15500594251410820",
+    "source_id": "41564272",
+    "affiliations": [
+      "Department of Integrative Health Sciences, Faculty of Medicine, Nagoya University, Nagoya, Japan.",
+      "Graduate School of Medicine, Nagoya University, Nagoya, Japan.",
+      "Department of Human Enhancement & Hand Surgery, Graduate School of Medicine, Nagoya University, Nagoya, Japan.",
+      "Department of Orthopaedic Surgery, Toyota Kosei Hospital, Toyota, Japan."
+    ],
+    "score": 5,
+    "grade": "A",
+    "matched_terms": [
+      "magnetoencephalography",
+      "functional connectivity"
+    ],
+    "digest": null
+  },
+  {
+    "title": "Dilute-Limit Defect Displacements Enabled by Brillouin-Zone Sampling",
+    "abstract": "Defects and their interaction with the semiconductor host lattice play an essential role in a variety of technologies. When a defect transitions between two electronic states, the lattice distorts in response. Large displacements occur near the defect, inducing displacements on neighboring atoms, and so on, producing small displacements on atoms hundreds of Ångströms from the defect. Describing these displacements accurately is challenging for first-principles calculations due to limited supercell sizes. Here we demonstrate a procedure to efficiently obtain dilute-limit atomic displacements, using information obtained in typical modest supercells. In our approach, the atomic displacements are first obtained in a small supercell and converted into a force difference under a harmonic potential energy surface. The force difference and phonon modes at different ${\\bf q}$-points are then unfolded into the Born-von Kármán supercell to obtain the dilute-limit atomic displacements. We critically analyze the convergence behavior of the force difference and study possible electron density differences that give rise to those forces, arguing that modest supercells are sufficient for internal transitions and bound-exciton transitions. Two example applications of our approach are given: (1) we calculate the luminescence spectrum of the NV center in diamond and the T center in Si and (2) we obtain dilute-limit configuration coordinate diagrams for these defects. In particular, we find that coupling to acoustic phonon modes reduces the accepting-mode frequency in the configuration coordinate diagram. Our work provides the missing ingredients necessary to address truly dilute-limit transitions at defects.",
+    "authors": [
+      "Mark E. Turiansky",
+      "John L. Lyons",
+      "Noam Bernstein"
+    ],
+    "published": "2026-08-27",
+    "source": "arXiv",
+    "url": "https://arxiv.org/abs/2608.27722v1",
+    "doi": "",
+    "source_id": "2608.27722v1",
+    "affiliations": [],
+    "score": 3,
+    "grade": "B",
+    "matched_terms": [
+      "nv center"
+    ],
+    "digest": null
+  },
+  {
+    "title": "A general framework for vectorial detection PSF analysis for oblique plane microscopy utilizing trans-medium intermediate image coupling.",
+    "abstract": "We present a unified theoretical framework for vectorial detection point spread function (PSF) analysis in oblique plane microscopy (OPM) systems incorporating arbitrary combinations of secondary and tertiary objectives. By modeling the amplitude, polarization, and phase modulation of each refracted ray at the trans-medium interface, we quantitatively evaluate how key parameters-including the oblique plane angle, the refractive index of the immersion medium, and system geometry-affect the size and orientation of the 3D detection PSF under the remote focusing condition and within the Debye approximation. Especially, we show that the differential optical path length, which is central to PSF estimation, is independent of the refractive index of the tertiary objective's working medium. Furthermore, by comparing three representative secondary-to-tertiary objective configurations, we find that the trans-medium intermediate image coupling configuration generally yields a detection PSF that is more closely aligned with the secondary objective's optical axis. This framework provides a generalizable approach for assessing OPM performance under diverse optical configurations and offers practical guidance for system design and optimization.",
+    "authors": [
+      "Jiapeng Zhu",
+      "Haoliang Luo",
+      "Hanxiao Chen",
+      "Yuanhao Zhang",
+      "Zixian Cao",
+      "Wenxuan Liang"
+    ],
+    "published": "2026Sep",
+    "source": "PubMed",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42250330/",
+    "doi": "10.1016/j.micron.2026.104059",
+    "source_id": "42250330",
+    "affiliations": [
+      "School of Physical Sciences, University of Science and Technology of China, Hefei, Anhui 230026, PR China.",
+      "School of Biomedical Engineering, Division of Life Sciences and Medicine, University of Science and Technology of China, Hefei, Anhui 230026, PR China; Suzhou Institute for Advanced Research, University of Science and Technology of China, Suzhou, Jiangsu 215123, PR China.",
+      "School of Physical Sciences, University of Science and Technology of China, Hefei, Anhui 230026, PR China; School of Biomedical Engineering, Division of Life Sciences and Medicine, University of Science and Technology of China, Hefei, Anhui 230026, PR China; Suzhou Institute for Advanced Research, University of Science and Technology of China, Suzhou, Jiangsu 215123, PR China. Electronic address: liangwenxuan@ustc.edu.cn."
+    ],
+    "score": 2,
+    "grade": "B",
+    "matched_terms": [
+      "opm"
+    ],
+    "digest": null
+  },
+  {
+    "title": "Beta event-related synchronization after muscle contraction is modulated by voluntary movement patterns: An EEG and MEG study.",
+    "abstract": "Beta-band event-related synchronization (βERS) in the contralateral sensorimotor cortex is induced by voluntary movement and somatosensory input, suggesting its deep involvement in afferent information processing, but the precise generative mechanisms require further investigation. This study examined the contributions of joint movement to βERS following self-paced voluntary movement. The βERS was recorded from 15 healthy adults while performing a task involving contraction of the right extensor indicis proprius muscle with and without metacarpophalangeal joint movement using electroencephalography (EEG) and magnetoencephalography (MEG). In both joint movement and non-movement conditions, βERS amplitude was significantly greater than baseline, whether measured by EEG or MEG, but was significantly greater in the joint movement condition. In addition, βERS amplitude was significantly greater when measured by MEG. These findings suggest that, in addition to changes in muscle tension, afferent inputs associated with changes in joint position may contribute to the increase in βERS amplitude. The stronger βERS detected by MEG further suggests that neuronal activity in cortical sulci is a major contributor to βERS generation. This study provides new insights into the physiological mechanisms underlying βERS.",
+    "authors": [
+      "Rin Kosuge",
+      "Hidekazu Saito",
+      "Yuya Matsuda",
+      "Mayu Akaiwa",
+      "Ryo Kurokawa",
+      "Yasushi Sugawara",
+      "Eriko Shibata",
+      "Takeshi Sasaki",
+      "Jun Shinozaki",
+      "Yuki Ueda",
+      "Kazuhiro Sugawara"
+    ],
+    "published": "2026Sep",
+    "source": "PubMed",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42314919/",
+    "doi": "10.1016/j.neuroimage.2026.122065",
+    "source_id": "42314919",
+    "affiliations": [
+      "Graduate School of Health Sciences, Sapporo Medical University, Sapporo, Hokkaido, Japan. Electronic address: rinkosuge.sap@gmail.com.",
+      "Department of Occupational Therapy, School of Health Sciences, Sapporo Medical University, Sapporo, Hokkaido, Japan. Electronic address: hidekazu@sapmed.ac.jp.",
+      "Graduate School of Health Sciences, Sapporo Medical University, Sapporo, Hokkaido, Japan. Electronic address: pinericefield.y@gmail.com.",
+      "Department of Physical Therapy, Human Health Sciences, Graduate School of Medicine, Kyoto University, Kyoto, Japan; Department of Physical Therapy, School of Health Sciences, Sapporo Medical University, Sapporo, Hokkaido, Japan. Electronic address: akaiwa.mayu.8r@kyoto-u.ac.jp.",
+      "Department of Rehabilitation, Sapporo Hakuyokai Hospital, Sapporo, Hokkaido, Japan. Electronic address: kurokawaryo.soc@gmail.com.",
+      "Department of Rehabilitation, Sapporo Hakuyokai Hospital, Sapporo, Hokkaido, Japan. Electronic address: yasushi.sug@gmail.com.",
+      "Major of Physical Therapy, Department of Rehabilitation, Faculty of Healthcare and Science, Hokkaido Bunkyo University, Eniwa, Hokkaido, Japan. Electronic address: shiba-e@do-bunkyodai.ac.jp.",
+      "Department of Physical Therapy, School of Health Sciences, Sapporo Medical University, Sapporo, Hokkaido, Japan. Electronic address: t-sasaki@sapmed.ac.jp.",
+      "Division of Systems Neuroscience, Department of Physiology, School of Medicine, Sapporo Medical University, Sapporo, Hokkaido, Japan. Electronic address: jshino@sapmed.ac.jp.",
+      "Department of Pediatrics, Hokkaido University Hospital, Sapporo, Hokkaido, Japan. Electronic address: yu_ueda@med.hokudai.ac.jp.",
+      "Department of Physical Therapy, School of Health Sciences, Sapporo Medical University, Sapporo, Hokkaido, Japan. Electronic address: kaz.sugawara@sapmed.ac.jp."
+    ],
+    "score": 2,
+    "grade": "B",
+    "matched_terms": [
+      "magnetoencephalography"
+    ],
+    "digest": null
+  },
+  {
+    "title": "Prediction and Prediction Error in Autism: A Meta-Analysis of Functional Magnetic Resonance Imaging Results.",
+    "abstract": "In autism spectrum condition (ASC), altered priors/predictions or prediction errors have been hypothesized to increase the influence of bottom-up sensory input, relative to top-down prior knowledge. Such alterations could account for several autistic features, but their empirical basis is unclear. In neurotypical (NT) individuals, multiple neuroimaging meta-analyses have aimed to outline domain-general prediction networks of the brain. However, there has not been a similar meta-analysis in autism. We performed a literature search for functional magnetic resonance imaging and magnetoencephalography studies with autistic participants. The contrasts that explicitly or implicitly involved the processing of priors/predictions and prediction errors were selected. Contrasts were divided into those that reported stronger activation in ASC compared with NT groups (ASC > NT; 8 contrasts; 139 ASC, 150 NT) and vice versa (NT > ASC; 13 contrasts; 261 ASC, 289 NT). The convergence of differences between the groups was then tested using activation likelihood estimation meta-analysis. We also identified 37 contrasts without significant group differences. ASC > NT did not result in significant convergence. NT > ASC converged in a cluster in the medial frontal gyrus/cingulate gyrus. We found converging NT > ASC activation differences in an area associated with error monitoring and uncertainty estimation. Our results are generally consistent with notions of altered predictions or prediction errors in autism, pointing to differences at high levels of the information-processing hierarchy. However, we recommend a cautious interpretation, given the limited number of available contrasts and the high proportion of null results.",
+    "authors": [
+      "Hjalmar Nobel Norrman",
+      "Yating Huang",
+      "Annelies Van't Westeinde",
+      "Tessa M van Leeuwen",
+      "Peter Fransson",
+      "Sven Bölte",
+      "Janina Neufeld"
+    ],
+    "published": "2026Sep",
+    "source": "PubMed",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42388528/",
+    "doi": "10.1016/j.bpsgos.2026.100760",
+    "source_id": "42388528",
+    "affiliations": [
+      "Center of Neurodevelopmental Disorders at Karolinska Institutet, Centre for Psychiatry Research, Department of Women's and Children's Health, Karolinska Institutet, Stockholm Health Care Services, Stockholm, Sweden.",
+      "Pediatric Endocrinology Unit, Department of Women's and Children's Health, Karolinska Institutet, Karolinska University Hospital, Stockholm, Sweden.",
+      "Pediatric Endocrinology Unit, Department of Clinical Sciences, Sahlgrenska Academy, University of Gothenburg, Sahlgrenska University Hospital, Gothenburg, Sweden.",
+      "Department of Communication and Cognition, Tilburg School of Humanities and Digital Sciences, Tilburg University, Tilburg, the Netherlands.",
+      "Donders Institute for Brain, Cognition and Behaviour, Radboud University, Nijmegen, the Netherlands.",
+      "Department of Clinical Neuroscience, Karolinska Institutet, Stockholm, Sweden.",
+      "Curtin Autism Research Group, Curtin School of Allied Health, Curtin University, Perth, Western Australia, Australia.",
+      "Child and Adolescent Psychiatry, Stockholm Health Care Services, Stockholm, Sweden.",
+      "Swedish Collegium for Advanced Study, Uppsala, Sweden."
+    ],
+    "score": 2,
+    "grade": "B",
+    "matched_terms": [
+      "magnetoencephalography"
+    ],
+    "digest": null
+  },
+  {
+    "title": "Simultaneous prefrontal-occipital high-definition transcranial direct-current stimulation modulates beta and gamma oscillations serving abstract reasoning.",
+    "abstract": "Recent studies have shown that prefrontal, parietal, and occipital cortices are critical for abstract reasoning and other fluid intelligence tasks, although the contribution of individual regions and possible laterality effects remain poorly understood. Herein, we use an innovative dual-montage, high-definition transcranial direct-current stimulation (HD-tDCS) approach to examine the impact of simultaneously stimulating prefrontal and occipital cortices on the neural oscillatory dynamics underlying abstract reasoning in 44 healthy adults. Across three sessions, participants underwent concurrent anodal stimulation of the midline occipital and either left or right dorsolateral prefrontal cortices (DLPFC), or sham to both sites. Participants then completed an abstract reasoning task during magnetoencephalography (MEG) and the resulting data were imaged in the time-frequency domain and examined voxel-wise using 1 × 3 repeated-measures ANOVAs. Significant stimulation-related effects included stronger beta oscillations (i.e., more negative relative to baseline) in the left DLPFC following right DLPFC-occipital HD-tDCS relative to both left DLPFC-occipital stimulation and sham. Stronger beta oscillations were also found in the right temporoparietal junction (TPJ) following either type of active stimulation relative to sham. Additionally, we found increased gamma activity in the left inferior parietal, left supplementary motor area, and left somatosensory cortices following both types of active stimulation relative to sham, and the strength of such gamma activity was significantly related to reaction time. In conclusion, we found that anodal stimulation of the DLPFC-occipital cortices strengthened beta and gamma oscillations in key regions for abstract reasoning, with some evidence for laterality effects on prefrontal stimulation and implications for behavior.",
+    "authors": [
+      "Tony W Wilson",
+      "Madison A Bravo",
+      "Peihan J Huang",
+      "Kellen M McDonald",
+      "Jason A John",
+      "Grant M Garrison",
+      "Kennedy A Kress",
+      "Lauren K Webert",
+      "Jake J Son",
+      "Hannah J Okelberry",
+      "Maggie P Rempe",
+      "Yasra Arif",
+      "Nathan M Petro"
+    ],
+    "published": "2026Sep",
+    "source": "PubMed",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42379403/",
+    "doi": "10.1016/j.neuroimage.2026.122087",
+    "source_id": "42379403",
+    "affiliations": [
+      "Institute for Human Neuroscience, Boys Town National Research Hospital, Boys Town, NE, USA; Department of Pharmacology & Neuroscience, Creighton University School of Medicine, Omaha, NE, USA. Electronic address: tony.wilson@boystown.org.",
+      "Institute for Human Neuroscience, Boys Town National Research Hospital, Boys Town, NE, USA.",
+      "Institute for Human Neuroscience, Boys Town National Research Hospital, Boys Town, NE, USA; Department of Pharmacology & Neuroscience, Creighton University School of Medicine, Omaha, NE, USA.",
+      "Institute for Human Neuroscience, Boys Town National Research Hospital, Boys Town, NE, USA; College of Medicine, University of Nebraska Medical Center (UNMC), Omaha, NE, USA."
+    ],
+    "score": 2,
+    "grade": "B",
+    "matched_terms": [
+      "magnetoencephalography"
+    ],
+    "digest": null
+  },
+  {
+    "title": "Temporally structured motor and auditory representations in covert syllable production.",
+    "abstract": "Inner speaking-the deliberate generation of speech through covert production mechanisms-is a common human experience. Current accounts propose that it engages sensorimotor processes similar to those underlying overt speech. Here, we asked whether motor and auditory representations during inner speaking maintain the granularity and temporal structure observed in overt speech. Using magnetoencephalography and time-resolved decoding, we examined neural dynamics across two experiments. Participants covertly produced consonant-vowel syllables designed to emphasize either articulatory or acoustic phonetic components through contrasts in the consonants or vowels, respectively. Across experiments, neural activity closely paralleled stages for overt speech. Consonants (articulatory contrasts) were more strongly decoded from speech motor cortex before the expected syllable onset, whereas vowels (acoustic contrasts) were more strongly decoded from auditory cortex immediately afterward, consistent with the onset of internally generated percepts. Vowel discriminability in auditory regions was further graded according to separation along a perceptually relevant acoustic dimension in formant space approximated by the F2-F1 projection, indicating specificity in auditory representations. These findings reveal temporally structured, phoneme-level content-specific sensorimotor representations during inner speaking, consistent with production-based accounts involving internal forward models.",
+    "authors": [
+      "Joan Orpella",
+      "Francesco Mantegna",
+      "Chantal Oderbolz",
+      "M Florencia Assaneo",
+      "David Poeppel"
+    ],
+    "published": "2026Sep15",
+    "source": "PubMed",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42673473/",
+    "doi": "10.1073/pnas.2536563123",
+    "source_id": "42673473",
+    "affiliations": [
+      "Department of Neuroscience, Georgetown University Medical Center, Washington, DC 20057.",
+      "Department of Psychology, New York University, New York, NY 10003.",
+      "Department of Engineering Science, Oxford University, Oxford OX1 3PJ, Oxfordshire, United Kingdom.",
+      "Institute of Neurobiology, National Autonomous University of Mexico, Juriquilla 76230, Querétaro, Mexico.",
+      "Center for Language, Music and Emotion, New York University, New York, NY 10003."
+    ],
+    "score": 2,
+    "grade": "B",
+    "matched_terms": [
+      "magnetoencephalography"
+    ],
+    "digest": null
+  }
+]
