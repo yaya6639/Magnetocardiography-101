@@ -1,5 +1,28 @@
 [
   {
+    "title": "Duty-Cycle Optimization in a Pulse-Wwidth Modulation Bell--Bloom Pumping",
+    "abstract": "We investigate the duty-cycle-dependent atomic response under full-depth intensity pulse-width modulation in Bell--Bloom optical pumping. A time-domain Bloch model explicitly resolves the pump-on/off spin dynamics, yielding piecewise analytical transient solutions and a periodic steady-state description without cycle averaging or harmonic truncation. An extended free-induction-decay method independently determines the effective dark and pump-on transverse-relaxation rates, $W_0$ and $W$. The predicted lock-in responses agree well with experimental results. We find that for each Larmor frequency $ω_0$, the slope is maximized at a finite pump rate that increases with $ω_0$. These results provide a practical framework for sensitivity-oriented optimization of the duty cycle and pump rate in PWM-driven atomic magnetometers.",
+    "authors": [
+      "Ying-Hao Ye",
+      "Ling-Yan Hu",
+      "Dui-Gao Yi",
+      "Zhi-Fei Yu",
+      "Bing Chen"
+    ],
+    "published": "2026-08-24",
+    "source": "arXiv",
+    "url": "https://arxiv.org/abs/2608.22737v2",
+    "doi": "",
+    "source_id": "2608.22737v2",
+    "affiliations": [],
+    "score": 3,
+    "grade": "B",
+    "matched_terms": [
+      "atomic magnetometer"
+    ],
+    "digest": null
+  },
+  {
     "title": "Comparing aperiodic brain activity between eyes open rest and dynamic visual input using magnetoencephalography.",
     "abstract": "Inscapes is a low demand abstract animation used as an alternative to eyes open rest in neuroimaging studies, particularly with paediatric and clinical populations prone to head motion. Although prior work has established that functional connectivity patterns during Inscapes closely resemble those during rest, no study has examined whether the two conditions differ in aperiodic neural activity, a broadband feature of the power spectrum linked to excitation/inhibition balance. Here we used magnetoencephalography (MEG) in 54 healthy adults to compare spectrally parameterised aperiodic and periodic measures between eyes open rest and Inscapes viewing (visual component only, without audio). At the sensor level, both the aperiodic exponent and offset were higher during rest than during Inscapes across widespread frontoparietal and occipital distributions in both magnetometers and gradiometers. Source level analyses at both the parcellation and vertex levels largely supported these patterns. These results show that Inscapes and eyes open rest produce distinct aperiodic spectral profiles, indicating that the two conditions are not interchangeable for analyses involving broadband spectral dynamics or excitation/inhibition balance estimation. They also demonstrate that a shift in aperiodic activity occurs in multiple brain regions when dynamic rather than static visual stimuli are viewed.",
     "authors": [
