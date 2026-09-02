@@ -1,5 +1,79 @@
 [
   {
+    "title": "Individual differences in brain dynamics across a social cognition network induced by cortico-cerebellar tDCS in adults with autism spectrum disorder (ASD).",
+    "abstract": "Autism spectrum disorder (ASD) is a neurodevelopmental condition with core diagnostic domains of social communication impairments, restricted interests and repetitive behaviors. Idiosyncratic brain organization is a potential hallmark of ASD. Previous transcranial direct current stimulation (tDCS) studies often targeted dorsolateral prefrontal cortex, with changes oin brain dynamics averaged across the cohort. We utilized a magnetoencephalographic (MEG) array to characterize individual differences in brain dynamics induced by cortico-cerebellar tDCS across nodes of a social cognition network. A randomized, sham-controlled, double-blind, within-subject clinical trial was conducted in a cohort of 24 young adults with ASD or high autistic traits. Two separate sessions of computerized social learning activities were combined with verum/sham tDCS, with anodal electrode over right temporoparietal junction (TPJ) and cathode on right deltoid. Following stimulation, theta- and alpha-band activity were evaluated within nodes of a social cognition network: bilateral TPJ, fusiform, medial prefrontal cortex and Crus I/II of cerebellum. Idiosyncratic participant-specific up- and down-regulation of theta- and alpha-band activity occurred across the network. Activity in right Crus I/II, a region inundated by the stimulation current, strongly correlated with the change of activity summed across all cerebral cortical nodes in theta- but not alpha-band. Intrinsic theta-band activity is believed to mediate input/output relationships in cerebellar cortex and to drive synaptic plasticity. These results suggest that theta-band stimulation of cerebellar cortex might be an effective therapy for individuals on the autism spectrum who present with cerebellar hyperactivity.",
+    "authors": [
+      "Claudia D Tesche",
+      "Joan Esse Wilson"
+    ],
+    "published": "2026Sep01",
+    "source": "PubMed",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42680022/",
+    "doi": "10.1016/j.neuroimage.2026.122194",
+    "source_id": "42680022",
+    "affiliations": [
+      "Department of Psychology, University of New Mexico, Albuquerque, NM, USA. Electronic address: ctesche@unm.edu.",
+      "Department of Psychology, University of New Mexico, Albuquerque, NM, USA; Department of Health and Human Services - Communicative Disorders, Eastern New Mexico University, Portales, NM, USA."
+    ],
+    "score": 4,
+    "grade": "B",
+    "matched_terms": [
+      "clinical",
+      "opm"
+    ],
+    "digest": null
+  },
+  {
+    "title": "Active Visual Semantics: A large-scale MEG and eye-tracking dataset for understanding visual intelligence in action",
+    "abstract": "Here we present the Active Visual Semantics (AVS) dataset, a large-scale collection of magnetoencephalography (MEG) and eye-tracking data recorded while five participants freely explored 4,080 natural scenes over 10 sessions each, yielding more than 200,000 fixation epochs in total. Unlike existing neuroimaging datasets that rely on passive viewing with enforced central fixation, AVS captures brain activity during active scene exploration, including self-generated saccades and fixations. A semantic captioning task on 25% of the trials provides behavioural measures linking gaze to scene understanding and memory. In addition to neural and behavioural data, AVS includes per-fixation object category labels, human-rated annotations of the appearance of fixation targets in the scene captioning task and pupil dynamics. Individual head stabilisation casts were used during MEG data collection, which alongside with structural MRI scans, enabled precise cross-session source reconstruction. Using artificial neural network (ANN) encoding models we demonstrate that individual fixation-aligned MEG epochs hold visual content-specific signal, despite the challenges that active scene viewing poses for MEG signal quality. Further, we use fixation-aligned representation similarity analysis (RSA) and demonstrate that we can derive fixation object category averages that yield representational geometries which are highly reliable across participants. Both in MEG sensor and source space this structure is validated by its robust alignment with ANN object-level representational geometry. Taken together, AVS provides a rich resource for investigating a large variety of questions regarding the neural mechanisms of active vision, object recognition and scene captioning during natural viewing, and the relationship between gaze behaviour and memory encoding.",
+    "authors": [
+      "Philip Sulewski",
+      "Carmen Amme",
+      "Peter König",
+      "Martin N. Hebart",
+      "Tim C. Kietzmann"
+    ],
+    "published": "2026-09-01",
+    "source": "arXiv",
+    "url": "https://arxiv.org/abs/2609.01055v1",
+    "doi": "",
+    "source_id": "2609.01055v1",
+    "affiliations": [],
+    "score": 2,
+    "grade": "B",
+    "matched_terms": [
+      "magnetoencephalography"
+    ],
+    "digest": null
+  },
+  {
+    "title": "Neuromagnetic representation of vowel prosody in the auditory cortex.",
+    "abstract": "A key feature of vowels in spoken language is that their fundamental frequency (f0), which underlies perceived pitch, can change dynamically over time. However, it remains elusive how such prosodic glides shape the neural response in the auditory cortex. The current magnetoencephalography (MEG) experiment was designed to study the transient and sustained neuromagnetic correlates of prosodic contour information in vowels, with a particular focus on the P2 component. Twenty-four normal-hearing participants passively listened to vowel sequences in which both vowel type and prosodic contour were either unchanged or varied between successive vowels. At the level of single vowels, the results showed that falling contours elicit larger and earlier P2 responses than rising and flat prosodic contours. At the level of vowel triplets, the P2 was larger in response to stimulus sequences in which prosodic contour was varied across stimuli. The data indicate that the P2 might be a neural correlate of the early processing of prosodic contour information; moreover, they suggest that the P2 might be particularly sensitive to pitch glides, possibly due to longer time constants that are encompassed within the P2.",
+    "authors": [
+      "Esther Megbel",
+      "Kurt Steinmetzger",
+      "André Rupp",
+      "Martin Andermann"
+    ],
+    "published": "2026Sep01",
+    "source": "PubMed",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42680788/",
+    "doi": "10.1038/s41598-026-68466-x",
+    "source_id": "42680788",
+    "affiliations": [
+      "Section of Biomagnetism, Department of Neurology, Heidelberg University Hospital, Im Neuenheimer Feld 400, 69120, Heidelberg, Germany.",
+      "Department of Child and Adolescent Psychiatry and Psychotherapy, Central Institute of Mental Health, J 5, 68159, Mannheim, Germany.",
+      "Tinnitus Center, Charité - Universitätsmedizin Berlin, Luisenstraße 13, 10117, Berlin, Germany.",
+      "Section of Biomagnetism, Department of Neurology, Heidelberg University Hospital, Im Neuenheimer Feld 400, 69120, Heidelberg, Germany. andermann@uni-heidelberg.de."
+    ],
+    "score": 2,
+    "grade": "B",
+    "matched_terms": [
+      "magnetoencephalography"
+    ],
+    "digest": null
+  },
+  {
     "title": "Duty-Cycle Optimization in a Pulse-Wwidth Modulation Bell--Bloom Pumping",
     "abstract": "We investigate the duty-cycle-dependent atomic response under full-depth intensity pulse-width modulation in Bell--Bloom optical pumping. A time-domain Bloch model explicitly resolves the pump-on/off spin dynamics, yielding piecewise analytical transient solutions and a periodic steady-state description without cycle averaging or harmonic truncation. An extended free-induction-decay method independently determines the effective dark and pump-on transverse-relaxation rates, $W_0$ and $W$. The predicted lock-in responses agree well with experimental results. We find that for each Larmor frequency $ω_0$, the slope is maximized at a finite pump rate that increases with $ω_0$. These results provide a practical framework for sensitivity-oriented optimization of the duty cycle and pump rate in PWM-driven atomic magnetometers.",
     "authors": [
